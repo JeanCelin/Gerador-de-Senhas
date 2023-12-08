@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"  href="./styles.css">
@@ -8,9 +11,29 @@
   <script href="scripts.js"></script>
 </head>
 <body>
-  
-<p>hello world</p>
+  <div id="container">
+     <h1>Gerador de senhas</h1>
 
+     <div id="options-container">
+
+      <label for="lowerCase">
+        <input type="checkbox" name="lowerCase" id="lowerCase"/>Letras minúsculas
+      </label>
+      <label for="upperCase">
+        <input type="checkbox" name="upperCase" id="upperCase"/>Letras maiúsculas
+      </label>
+      <label for="numbers">
+        <input type="checkbox" name="numbers" id="numbers"/>Letras números
+      </label>
+      <label for="symbols">
+        <input type="checkbox" name="symbols" id="symbols"/>Letras símbolos
+      </label>
+      <label for="caracters-length">Quantidade de caractéres
+        <input type="range" nome="caracters-length" id="caracters-length">
+      </label>
+     </div>
+
+  </div>
 
 </body>
 </html>
