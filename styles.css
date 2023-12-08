@@ -6,25 +6,80 @@
 }
 body {
   height: 100vh;
-
   display: flex;
-  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(25, 2, 46, 0.842) 30%,
+    rgb(0, 0, 0)
+  );
+  color: white;
 }
 
 #container {
-  border: 1px solid red;
+  box-shadow: 10px 8px 20px #000000;
+
   margin: auto;
   width: 720px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #container h1 {
   font-size: 64px;
-  padding: 0 0 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.726);
+  margin: 0 70px;
+
+  border-bottom: 5px solid rgba(255, 255, 255, 0.726);
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 #options-container {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-container {
+  width: 50%;
+  padding: 5px 0 5px 50px;
+}
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.password-container {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.password-container input {
+  margin: 15px 0 0;
+}
+.password-container label {
+  font-size: 24px;
+}
+
+#rangeValue {
+  font-size: 20px;
+  padding-top: 8px;
+}
+h3 {
+  text-align: center;
+  font-size: 24px;
+  padding: 45px 0 25px;
+}
+h4 {
+  text-align: center;
+  padding: 30px;
+  margin: 30px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 24px;
+
+  background-color: rgba(208, 213, 218, 0.884);
+  box-shadow: 10px 8px 20px #000000;
 }

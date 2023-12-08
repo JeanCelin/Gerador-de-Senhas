@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"  href="./styles.css">
-  <title>Document</title>
-  <script href="scripts.js"></script>
-</head>
-<body>
-  <div id="container">
-     <h1>Gerador de senhas</h1>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Gerador de senhas</h1>
 
-     <div id="options-container">
+      <div id="options-container">
+        <label class="checkbox-container" for="lowerCase">
+          <input type="checkbox" name="lowerCase" id="lowerCase" />Letras
+          minúsculas
+        </label>
+        <label class="checkbox-container" for="upperCase">
+          <input type="checkbox" name="upperCase" id="upperCase" />Letras
+          maiúsculas
+        </label>
+        <label class="checkbox-container" for="numbers">
+          <input type="checkbox" name="numbers" id="numbers" />Letras números
+        </label>
+        <label class="checkbox-container" for="symbols">
+          <input type="checkbox" name="symbols" id="symbols" />Letras símbolos
+        </label>
+      </div>
 
-      <label for="lowerCase">
-        <input type="checkbox" name="lowerCase" id="lowerCase"/>Letras minúsculas
-      </label>
-      <label for="upperCase">
-        <input type="checkbox" name="upperCase" id="upperCase"/>Letras maiúsculas
-      </label>
-      <label for="numbers">
-        <input type="checkbox" name="numbers" id="numbers"/>Letras números
-      </label>
-      <label for="symbols">
-        <input type="checkbox" name="symbols" id="symbols"/>Letras símbolos
-      </label>
-      <label for="caracters-length">Quantidade de caractéres
-        <input type="range" nome="caracters-length" id="caracters-length">
-      </label>
-     </div>
-
-  </div>
-
-</body>
+      <div class="password-container">
+        <label for="caracters-length">Quantidade de caractéres </label>
+        <input
+          type="range"
+          min="4"
+          max="60"
+          value="30"
+          nome="caracters-length"
+          id="rangeInput"
+        />
+        <span id="rangeValue"></span>
+      </div>
+      <div>
+        <h3>Sua senha aqui!</h3>
+        <h4>Esta é a sua senha!</h4>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
 </html>
