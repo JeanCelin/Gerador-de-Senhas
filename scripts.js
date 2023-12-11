@@ -41,5 +41,5 @@ const generatePassword = () => {
 
   return password
 }
-
-
+const valor = document.querySelector("#valor")
+valor.innerHTML = generatePassword()
