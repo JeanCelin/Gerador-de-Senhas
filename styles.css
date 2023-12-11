@@ -79,6 +79,11 @@ body {
   padding: 10px;
   cursor: pointer;
 }
+.password-button-container button:hover {
+  background-color: rgba(25, 2, 46, 0.747);
+  border: 1px solid black;
+  transition: background-color ease-out 0.9ms;
+}
 h4 {
   text-align: center;
   padding: 30px;
@@ -89,4 +94,13 @@ h4 {
 
   background-color: rgba(208, 213, 218, 0.884);
   box-shadow: 10px 8px 20px #000000;
+}
+#password-box {
+  text-align: center;
+  margin: 60px auto;
+  padding: 10px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
 }
