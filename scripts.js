@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     rangeValue.textContent = rangeInput.value
   })
 })
+let valueRange = () => { return document.querySelector("#rangeInput").value}
 
 const generatePassword = () => {
   let password = ""
-  const passwordLength = 10
+  const passwordLength = valueRange(6)
 
   const lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
   const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -42,4 +43,6 @@ const generatePassword = () => {
   return password
 }
 const valor = document.querySelector("#valor")
-valor.innerHTML = generatePassword()
+const refreshPassword = () => {
+  valor.innerHTML = generatePassword()
+}
