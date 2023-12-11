@@ -12,7 +12,7 @@ let valueRange = () => {
 
 const generatePassword = () => {
   let password = ""
-  const passwordLength = valueRange(6)
+  const passwordLength = valueRange()
 
   const lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
   const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
