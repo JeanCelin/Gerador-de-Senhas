@@ -17,7 +17,7 @@ const generatePassword = () => {
   const lowercaseChars = "abcdefghijklmnopqrstuvwxyz"
   const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   const numberChars = "0123456789"
-  const symbolChars = "!@#$%^&*()_-+=[]{}|;:,.<>?"
+  const symbolChars = "@#*_-+[].?"
 
   const includeLetterLowerCase = document.getElementById("lowerCase").checked
   const includeLetterUpperCase = document.getElementById("upperCase").checked
