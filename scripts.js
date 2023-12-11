@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     rangeValue.textContent = rangeInput.value
   })
 })
-let valueRange = () => { return document.querySelector("#rangeInput").value}
+let valueRange = () => {
+  return document.querySelector("#rangeInput").value
+}
 
 const generatePassword = () => {
   let password = ""
@@ -45,4 +47,8 @@ const generatePassword = () => {
 const valor = document.querySelector("#valor")
 const refreshPassword = () => {
   valor.innerHTML = generatePassword()
+}
+function showPassword() {
+  const displayPassword = document.querySelector("#password-box")
+  displayPassword.style.display = "block"
 }
