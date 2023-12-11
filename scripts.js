@@ -44,10 +44,13 @@ const generatePassword = () => {
 
   return password
 }
-const valor = document.querySelector("#valor")
-const refreshPassword = () => {
+//ATUALIZA A SENHA AO CLICAR NOVAMENTE NO BOTÃO DE GERAR SENHA
+function refreshPassword() {
+  const valor = document.querySelector("#valor")
   valor.innerHTML = generatePassword()
 }
+
+//MOSTRA A SENHA APOS CLICAR NO BOTÃO
 function showPassword() {
   const displayPassword = document.querySelector("#password-box")
   displayPassword.style.display = "block"
