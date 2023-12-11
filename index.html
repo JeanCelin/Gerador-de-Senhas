@@ -18,18 +18,28 @@
 
       <div id="options-container">
         <label class="checkbox-container" for="lowerCase">
-          <input type="checkbox" name="lowerCase" id="lowerCase" />Letras
-          minúsculas
+          <input
+            type="checkbox"
+            name="lowerCase"
+            id="lowerCase"
+            checked
+          />Letras minúsculas
         </label>
         <label class="checkbox-container" for="upperCase">
-          <input type="checkbox" name="upperCase" id="upperCase" />Letras
-          maiúsculas
+          <input
+            type="checkbox"
+            name="upperCase"
+            id="upperCase"
+            checked
+          />Letras maiúsculas
         </label>
         <label class="checkbox-container" for="numbers">
-          <input type="checkbox" name="numbers" id="numbers" />Letras números
+          <input type="checkbox" name="numbers" id="numbers" checked />Letras
+          números
         </label>
         <label class="checkbox-container" for="symbols">
-          <input type="checkbox" name="symbols" id="symbols" />Letras símbolos
+          <input type="checkbox" name="symbols" id="symbols" checked />Letras
+          símbolos
         </label>
       </div>
 
@@ -45,9 +55,9 @@
         />
         <span id="rangeValue"></span>
       </div>
-      <div>
-        <h3>Sua senha aqui!</h3>
-        <h4>Esta é a sua senha!</h4>
+      <div class="password-button-container">
+        <button>Gerar senha</button>
+        <p id="valor"></p>
       </div>
     </div>
     <script src="scripts.js"></script>

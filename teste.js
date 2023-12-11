@@ -1,12 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Exibir o valor ao iniciar a página
-  rangeValue.textContent = rangeInput.value
-  // Atualizar o valor ao mudar o input range
-  rangeInput.addEventListener("input", function () {
-    rangeValue.textContent = rangeInput.value
-  })
-})
-
 const generatePassword = () => {
   let password = ""
   const passwordLength = 10
@@ -42,4 +33,4 @@ const generatePassword = () => {
   return password
 }
 
-
+console.log(generatePassword())
