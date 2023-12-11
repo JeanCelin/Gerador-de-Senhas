@@ -5,11 +5,13 @@
   font-family: "Roboto", sans-serif;
 }
 :root {
-  --background-color-primary: rgba(25, 2, 46, 0.842);
+  --background-color-primary: rgba(52, 52, 53, 0.842);
   --background-color-secondary: rgb(0, 0, 0);
-  --password-background: white;
-  --title-color: rgba(255, 255, 255, 0.726);
-  --text-color: white;
+  --password-background: rgba(255, 255, 255, 0.808);
+  --password-background-hover: rgba(17, 17, 17, 0.842);
+  --title-color: rgba(255, 255, 255, 0.849);
+  --text-color: rgba(255, 255, 255, 0.849);
+  --password-color-hover: rgb(255, 255, 255);
   --password-color: black;
   --borders-color: black;
 }
@@ -48,17 +50,22 @@ body {
 
 #options-container {
   font-size: 24px;
+  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .checkbox-container {
+
   width: 50%;
   padding: 5px 0 5px 50px;
+ 
 }
 .checkbox-container input {
   margin-right: 10px;
+  
 }
+
 
 .password-container {
   padding-top: 40px;
@@ -68,6 +75,7 @@ body {
 }
 .password-container input {
   margin: 15px 0 0;
+  
 }
 .password-container label {
   font-size: 24px;
@@ -81,18 +89,21 @@ body {
   text-align: center;
   margin-top: 16px;
   padding: 10px;
+
 }
 .password-button-container button {
   font-size: 24px;
   color: var(--text-color);
   background: none;
-  padding: 10px;
   cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
 }
 .password-button-container button:hover {
-  background-color: var(--background-color-primary);
+  background-color: var(--password-background-hover);
   border: 1px solid var(--borders-color);
-  transition: background-color ease-out 0.9ms;
+  color: var(--password-color-hover);
+  transition: background-color ease-out 0.3s;
 }
 h4 {
   text-align: center;
@@ -111,4 +122,5 @@ h4 {
   color: var(--password-color);
   font-weight: bold;
   display: none;
+  border-radius: 5px;
 }
