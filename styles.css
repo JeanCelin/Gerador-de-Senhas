@@ -4,15 +4,25 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+:root {
+  --background-color-primary: rgba(25, 2, 46, 0.842);
+  --background-color-secondary: rgb(0, 0, 0);
+  --password-background: white;
+  --title-color: rgba(255, 255, 255, 0.726);
+  --text-color: white;
+  --password-color: black;
+  --borders-color: black;
+}
+
 body {
   height: 100vh;
   display: flex;
   background-image: linear-gradient(
     to right bottom,
-    rgba(25, 2, 46, 0.842) 30%,
-    rgb(0, 0, 0)
+    var(--background-color-primary) 30%,
+    var(--background-color-secondary)
   );
-  color: white;
+  color: var(--text-color);
 }
 
 #container {
@@ -28,10 +38,10 @@ body {
 #container h1 {
   font-size: 64px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.726);
+  color: var(--title-color);
   margin: 0 70px;
 
-  border-bottom: 5px solid rgba(255, 255, 255, 0.726);
+  border-bottom: 5px solid var(--title-color);
   border-radius: 20px;
   margin-bottom: 10px;
 }
@@ -74,25 +84,22 @@ body {
 }
 .password-button-container button {
   font-size: 24px;
-  color: white;
+  color: var(--text-color);
   background: none;
   padding: 10px;
   cursor: pointer;
 }
 .password-button-container button:hover {
-  background-color: rgba(25, 2, 46, 0.747);
-  border: 1px solid black;
+  background-color: var(--background-color-primary);
+  border: 1px solid var(--borders-color);
   transition: background-color ease-out 0.9ms;
 }
 h4 {
   text-align: center;
   padding: 30px;
   margin: 30px;
-  color: #000000;
   font-weight: bold;
   font-size: 24px;
-
-  background-color: rgba(208, 213, 218, 0.884);
   box-shadow: 10px 8px 20px #000000;
 }
 #password-box {
@@ -100,8 +107,8 @@ h4 {
   margin: 60px auto;
   padding: 10px;
   font-size: 24px;
-  background-color: white;
-  color: black;
+  background-color: var(--password-background);
+  color: var(--password-color);
   font-weight: bold;
   display: none;
 }
