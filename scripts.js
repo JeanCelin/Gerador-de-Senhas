@@ -33,17 +33,46 @@ const generatePassword = () => {
     return "Selecione pelo menos um tipo de caractere para a senha."
   }
 
-  const availableChars = `${includeLetterLowerCase ? lowercaseChars : ""}${
-    includeLetterUpperCase ? uppercaseChars : ""
-  }${includeNumbers ? numberChars : ""}${includeSymbols ? symbolChars : ""}`
+  let availableChars = ""
+  let requiredChars = ""
 
-  for (let i = 0; i < passwordLength; i++) {
+  if (includeLetterLowerCase) {
+    availableChars += lowercaseChars
+    requiredChars += lowercaseChars.charAt(
+      Math.floor(Math.random() * lowercaseChars.length)
+    )
+  }
+  if (includeLetterUpperCase) {
+    availableChars += uppercaseChars
+    requiredChars += uppercaseChars.charAt(
+      Math.floor(Math.random() * uppercaseChars.length)
+    )
+  }
+  if (includeNumbers) {
+    availableChars += numberChars
+    requiredChars += numberChars.charAt(
+      Math.floor(Math.random() * numberChars.length)
+    )
+  }
+  if (includeSymbols) {
+    availableChars += symbolChars
+    requiredChars += symbolChars.charAt(
+      Math.floor(Math.random() * symbolChars.length)
+    )
+  }
+
+  const remainingLength = passwordLength - requiredChars.length
+
+  for (let i = 0; i < remainingLength; i++) {
     const randomIndex = Math.floor(Math.random() * availableChars.length)
     password += availableChars.charAt(randomIndex)
   }
 
+  password = requiredChars + password
+
   return password
 }
+
 //ATUALIZA A SENHA AO CLICAR NOVAMENTE NO BOTÃO DE GERAR SENHA
 function refreshPassword() {
   const valor = document.querySelector("#valor")
