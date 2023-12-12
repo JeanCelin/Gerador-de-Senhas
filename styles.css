@@ -5,13 +5,13 @@
   font-family: "Roboto", sans-serif;
 }
 :root {
-  --background-color-primary: rgba(52, 52, 53, 0.842);
-  --background-color-secondary: rgb(0, 0, 0);
-  --password-background: rgba(255, 255, 255, 0.808);
-  --password-background-hover: rgba(17, 17, 17, 0.842);
-  --title-color: rgba(255, 255, 255, 0.849);
-  --text-color: rgba(255, 255, 255, 0.849);
-  --password-color-hover: rgb(255, 255, 255);
+  --background-color-primary: #f5f5f5;
+  --background-color-secondary:#f5f5f5;
+  --password-background: #f5f5f5;
+  --password-background-hover: #00ff009a;
+  --title-color: rgba(0, 0, 0, 0.849);
+  --text-color: rgba(0, 0, 0, 0.849);
+  --password-color-hover: rgb(0, 0, 0);
   --password-color: black;
   --borders-color: black;
 }
@@ -28,8 +28,6 @@ body {
 }
 
 #container {
-  box-shadow: 10px 8px 20px #000000;
-
   margin: auto;
   width: 720px;
 
@@ -49,11 +47,15 @@ body {
 }
 
 #options-container {
-  font-size: 24px;
+  font-size: 30px;
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
 }
+input[type="checkbox"] {
+  transform: scale(1.5); /* Ajuste o valor conforme necessário */
+}
+
 
 .checkbox-container {
 
@@ -123,4 +125,5 @@ h4 {
   font-weight: bold;
   display: none;
   border-radius: 5px;
+  border: 1px solid black;
 }
